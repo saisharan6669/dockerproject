@@ -1,0 +1,22 @@
+version: '3'
+services:
+  train:
+    image: saisharan6669/phonepaytrain:v1
+    ports:
+      - "8000:80"
+    deploy:
+      replicas: 3
+  movie:
+    image:  saisharan6669/phonepaymovie:v1
+    ports:
+      - "8001:80"
+    deploy:
+      replicas: 3
+  recharge:
+    image:  saisharan6669/phonepayrecharge:v1
+    ports:
+      - "8002:80"
+    deploy:
+      replicas: 3
+
+
